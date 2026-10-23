@@ -1,0 +1,1221 @@
+# MASTER BUILD PROMPT — APAAR SmartVerify AI
+## Premium Full-Stack Student Data Management & Verification Platform
+
+### 1. Your mission
+
+Build a complete, modern, secure, production-oriented web application named **APAAR SmartVerify AI**.
+
+Project title:
+
+**Development of an APAAR ID-Based Student Data Management and Verification Platform for AICTE-Approved Institutions**
+
+This application must support the entire journey:
+
+**Landing Page → Get Started → Google Sign-In → Role-Based Access → Institution Selection → Student Management → Data Import → Validation → Verification Review → Reports → Download / Export**
+
+Build the complete product, including the frontend, backend, database, authentication, role permissions, file handling, reports, and audit trail.
+
+Do not deliver only a landing page, a static dashboard, or a collection of disconnected screens.
+
+Every major button, form, table, filter, navigation item, import workflow, and report action must perform its intended function.
+
+Use original, verifiable reference data and authorised institutional submissions only. Never manufacture real-world records to make the application look populated.
+
+---
+
+# 2. Visual design direction
+
+Create an exceptionally polished, distinctive, enterprise-grade education technology platform.
+
+The design should feel like a premium institutional data platform rather than a generic college management template.
+
+### Visual identity
+
+Use a refined visual direction inspired by premium fintech dashboards, modern data platforms, and institutional enterprise software.
+
+Suggested palette:
+
+- Deep forest green: `#07110D`
+- Dark green surface: `#0B1812`
+- Secondary green: `#123D2A`
+- Emerald accent: `#1D6B48`
+- Soft mint: `#B8D8C2`
+- Warm gold accent: `#C8AA6E`
+- Primary light text: `#F2F6F0`
+- Muted text: `#9BAAA0`
+
+Use dark green as the primary brand identity. Introduce light surfaces selectively where they improve data readability.
+
+### Design principles
+
+- Strong visual hierarchy.
+- Premium typography.
+- Generous spacing.
+- Clean alignment.
+- Elegant transitions and micro-interactions.
+- Carefully designed cards and tables.
+- Subtle gradients and restrained glass effects.
+- Beautiful charts and status indicators.
+- Responsive desktop, tablet, and mobile layouts.
+- Accessible contrast and keyboard navigation.
+- Consistent icons using the existing icon library, preferably Lucide.
+- Consistent spacing, typography, radius, and colour tokens.
+
+Avoid excessive neon effects, unnecessary animations, overcrowded layouts, giant empty cards, and excessive glassmorphism.
+
+Do not make every element a card.
+
+Use illustrations and AI-generated visuals only where they add value, such as the landing-page hero or explanatory feature sections. Do not use decorative images inside data tables, verification records, or administrative forms.
+
+Prefer abstract educational data visualisations, geometric illustrations, and secure-data motifs over generic stock photographs.
+
+**The final result must look professionally art-directed, cohesive, distinctive, and ready for a serious product demonstration.**
+
+---
+
+# 3. Public landing page
+
+Build a compelling public-facing homepage that explains the platform before the user signs in.
+
+### A. Navigation bar
+
+Include:
+
+- APAAR SmartVerify AI logo and wordmark.
+- Home.
+- Platform.
+- Features.
+- Security.
+- How It Works.
+- Sign In.
+- Get Started.
+
+The navbar should have polished hover states, responsive mobile navigation, and a clear primary CTA.
+
+### B. Hero section
+
+Create a premium hero section with:
+
+Headline:
+
+**Trusted Student Data. Clearer Institutional Insights.**
+
+Supporting text:
+
+“An intelligent platform for authorised institutions to manage student records, validate enrolment data, identify inconsistencies, and produce reliable institutional reports.”
+
+Primary CTA: **Get Started**
+
+Secondary CTA: **Explore the Platform**
+
+Include a visually impressive but restrained abstract illustration representing connected institutions, secure identity data, and verified records.
+
+Any illustrative dashboard image must be labelled as illustrative and must not display fabricated live statistics.
+
+### C. Problem and solution
+
+Explain the actual problems the platform addresses:
+
+- Fragmented institutional submissions.
+- Incomplete or inconsistent student data.
+- Duplicate record candidates.
+- Difficult enrolment and intake comparisons.
+- Limited traceability of corrections.
+- Time-consuming reporting.
+
+Explain how the platform supports standardised submissions, explainable validation, controlled review, and reliable reports.
+
+Do not claim that the platform has official government integration unless it is genuinely configured and authorised.
+
+### D. Platform features
+
+Create visually distinct sections for:
+
+1. Institution directory.
+2. Student data management.
+3. Academic enrolment monitoring.
+4. CSV/XLSX bulk import.
+5. Data validation.
+6. Potential duplicate detection.
+7. Approved-intake monitoring.
+8. Verification review.
+9. Institution-level reports.
+10. Audit trail.
+11. Secure access control.
+12. PDF and CSV exports.
+
+Each section should explain a real capability.
+
+### E. How it works
+
+Show the workflow:
+
+1. Sign in securely.
+2. Access an authorised institution.
+3. Import or enter student records.
+4. Validate the submitted data.
+5. Resolve flagged issues.
+6. Review verification status.
+7. Generate reports.
+8. Export authorised results.
+
+### F. Security and trust section
+
+Explain:
+
+- Role-based permissions.
+- Protected student identifiers.
+- Institutional access boundaries.
+- Traceable data changes.
+- Controlled report exports.
+- Separation of format validation from official identity verification.
+
+Do not display fabricated certification badges, government endorsements, or claims of official approval.
+
+### G. Footer
+
+Include:
+
+- About.
+- Platform features.
+- Privacy notice.
+- Terms.
+- Contact or support.
+- Integration status where appropriate.
+
+Do not invent an official government affiliation or a support email address.
+
+---
+
+# 4. Get Started and authentication
+
+When the user clicks Get Started or Sign In, open a polished authentication flow.
+
+### Authentication options
+
+- Continue with Google.
+- Email sign-in, if enabled.
+- Account recovery.
+- Terms and privacy acknowledgement where required.
+
+Use Supabase Auth and configure the Google OAuth provider properly.
+
+Implement:
+
+- Secure login.
+- Sign-out.
+- Session persistence.
+- Password recovery if email authentication is enabled.
+- Protected routes.
+- Authentication error handling.
+- Session-expiry handling.
+- Redirects to the appropriate authorised workspace.
+
+If Google OAuth credentials are not configured, display a clear setup requirement. Do not simulate a successful Google login.
+
+Do not claim that an account is verified merely because a user has signed in with Google.
+
+---
+
+# 5. Role selection and account onboarding
+
+After the first successful sign-in, determine the user's authorised role and guide them through the appropriate onboarding process.
+
+Support these roles:
+
+### Role A: Student
+
+A student may:
+
+- View their own permitted profile.
+- View their own permitted enrolment information.
+- View their own verification or validation status.
+- See correction requests.
+- Submit permitted corrections or supporting documents.
+- Track submission status.
+- View or download permitted personal reports.
+
+A student must not browse other students' records, manage institution-wide data, approve their own verification, or access administrative reports.
+
+### Role B: Institution Staff / Data Entry Operator
+
+Staff may:
+
+- Access their assigned institution.
+- View permitted institutional records.
+- Add or update records within their permissions.
+- Import student data.
+- Review validation errors.
+- Submit corrections.
+- Track imports and submission history.
+
+Staff cannot approve restricted actions unless explicitly authorised.
+
+### Role C: Institution Administrator
+
+Institution administrators may:
+
+- Manage their authorised institution's data.
+- Manage permitted staff memberships.
+- Maintain programme information.
+- Manage academic enrolment records.
+- Import and validate institutional files.
+- Review verification findings.
+- Submit institution reports.
+- Track audit history for their authorised scope.
+- Manage institution onboarding information where permitted.
+
+They must not automatically access every institution on the platform.
+
+### Role D: Platform Administrator / Authorised Oversight User
+
+Platform administrators may perform permitted platform-wide operations, including:
+
+- Reviewing institution claims.
+- Managing authorised accounts and permissions.
+- Maintaining official reference datasets.
+- Monitoring data imports.
+- Reviewing cross-institution findings within their authorised scope.
+- Managing validation rules.
+- Viewing platform reports.
+- Inspecting audit events.
+- Monitoring integration status.
+
+Oversight users may have read-only or restricted review permissions depending on their assignment.
+
+### Critical role security
+
+Do not let a user obtain administrator privileges simply by choosing “Administrator” on a signup screen.
+
+Users may request an institutional role, but an authorised administrator must approve privileged access.
+
+Use database-backed roles and memberships.
+
+Apply role checks on the server and through Supabase RLS. Never rely on frontend visibility alone.
+
+---
+
+# 6. Institution selection and verification
+
+Create a complete institution onboarding workflow.
+
+The selection hierarchy must be:
+
+**India → State/Union Territory → District → Institution → Programme → Academic Year**
+
+### Reference data
+
+Investigate these official sources:
+
+- https://lgdirectory.gov.in/
+- https://www.data.gov.in/
+- https://www.aicte-india.org/
+- https://apaar.education.gov.in/
+- https://directory.apisetu.gov.in/api-collection/abc
+
+Verify that each dataset or API actually exists, is accessible, is authoritative for the intended fields, and may lawfully be used.
+
+Do not invent API endpoints or fabricate institution records.
+
+### Institution directory
+
+Store, where available:
+
+- Official institution name.
+- Official institution identifier.
+- State and district.
+- Institution category.
+- Management type.
+- Relevant affiliation details.
+- AICTE approval reference.
+- Academic year.
+- Approval status and effective period where verifiable.
+- Source reference.
+- Dataset version.
+- Last retrieved or imported date.
+
+Clearly distinguish:
+
+- Institution found in a directory.
+- Institution identity matched.
+- AICTE approval confirmed from a relevant source.
+- Institutional access approved by the platform.
+
+These are separate statuses.
+
+### Institution onboarding workflow
+
+1. User searches for an institution.
+2. User selects the matching verified reference record.
+3. User requests access or submits an institution claim.
+4. User provides the necessary authorised representative information.
+5. Platform administrator reviews the claim.
+6. Administrator approves, rejects, or requests corrections.
+7. Approved users receive institution-specific permissions.
+8. All decisions are recorded in the audit trail.
+
+If the official institution dataset has not been imported, display an appropriate empty state. Do not substitute fake colleges.
+
+---
+
+# 7. Authenticated application layout
+
+After authentication, use a professional application shell that maintains the platform's design identity.
+
+Include:
+
+- Collapsible sidebar.
+- Top navigation bar.
+- Current institution selector where applicable.
+- Academic-year selector where applicable.
+- Search.
+- Notifications based on actual events.
+- User profile menu.
+- Role indicator.
+- Breadcrumbs.
+- Main content region.
+
+The sidebar should adapt to the user's permissions.
+
+Use these main sections where authorised:
+
+1. Overview.
+2. Institution Directory.
+3. Student Directory.
+4. Academic Enrolment.
+5. CSV/XLSX Import.
+6. Import History.
+7. Validation Findings.
+8. Duplicate Review.
+9. Programme Management.
+10. Approved Intake.
+11. Institution Reports.
+12. Verification Review.
+13. Audit Trail.
+14. User and Role Management.
+15. Reference Data.
+16. Settings and Integrations.
+
+Do not show inaccessible pages as active navigation items.
+
+---
+
+# 8. Role-specific dashboards
+
+Create separate dashboard views using the same visual design system.
+
+## Student dashboard
+
+Display actual information belonging to the signed-in student:
+
+- Profile completeness.
+- Enrolment status.
+- Verification status.
+- Outstanding correction requests.
+- Recent actual account activity.
+- Available personal reports.
+
+Do not show other students' records.
+
+## Institution staff dashboard
+
+Display:
+
+- Total authorised enrolment records.
+- Records awaiting validation.
+- Records with errors.
+- Imports awaiting review.
+- Corrections required.
+- Recent actual submissions.
+- Assigned review tasks.
+
+## Institution administrator dashboard
+
+Display:
+
+- Institution enrolment summary.
+- Programme-wise enrolment.
+- Approved intake versus actual enrolment.
+- Validation findings.
+- Potential duplicate candidates.
+- Import history.
+- Submission status.
+- Reports.
+- Institution audit activity.
+
+## Platform administrator dashboard
+
+Display:
+
+- Institution onboarding requests.
+- Institution reference-data status.
+- Actual student-record totals within the authorised scope.
+- Validation queues.
+- Import job status.
+- Integration health.
+- Data-source refresh status.
+- Recent actual audit events.
+
+### Dashboard accuracy
+
+Every metric and chart must come from the real database or a clearly identified, verifiable source.
+
+Use consistent definitions, reporting periods, and filters.
+
+If no data exists, display zero where appropriate and clear empty states.
+
+Do not insert fake charts, fake notifications, fake recent activity, or random percentages.
+
+---
+
+# 9. Student Directory
+
+Build a complete student record management interface.
+
+### Student table
+
+Include appropriate columns:
+
+- Internal record ID.
+- Student name.
+- Masked APAAR identifier, where permitted.
+- Institution.
+- Programme.
+- Academic year.
+- Enrolment status.
+- Validation status.
+- Last updated.
+- Available actions.
+
+### Features
+
+- Search.
+- Pagination.
+- Sorting.
+- Filters.
+- Add student.
+- Edit record.
+- View details.
+- Submit for validation.
+- Request correction.
+- Archive or deactivate where permitted.
+- View record history.
+- Export authorised records.
+
+### Add student form
+
+Collect only the fields needed for the documented purpose.
+
+Possible fields:
+
+- Student name.
+- Protected APAAR identifier, where lawfully required.
+- Institution.
+- Programme.
+- Academic year.
+- Admission date.
+- Enrolment status.
+- Admission category.
+- Relevant category-specific information.
+- Required supporting documentation, where authorised.
+
+Validate inputs before saving.
+
+Require confirmation before destructive or consequential operations.
+
+All changes must persist in Supabase.
+
+Never expose raw APAAR identifiers in ordinary table columns, URLs, or logs.
+
+---
+
+# 10. Academic Enrolment
+
+Build a separate academic enrolment workflow.
+
+Support:
+
+- Programme selection.
+- Academic-year selection.
+- Institution-specific enrolment.
+- Admission categories.
+- Enrolment status.
+- Admission date.
+- Relevant historical enrolment records.
+- Corrections and review.
+- Institution-level summaries.
+
+Separate identity records from enrolment records where appropriate.
+
+Do not assume that repeated records always represent fraud. A student may have legitimate historical enrolments, transfers, or other permitted circumstances.
+
+Apply database constraints and explicit matching rules.
+
+---
+
+# 11. CSV/XLSX import
+
+Create a polished bulk import wizard.
+
+### Step 1: Select file
+
+Support appropriate CSV and XLSX files.
+
+Validate file type, size, encoding, and structure.
+
+### Step 2: Configure import
+
+Select the authorised institution, academic year, and relevant programme context.
+
+### Step 3: Map columns
+
+Allow the user to map source columns to supported fields.
+
+Display required fields and mapping errors.
+
+### Step 4: Preview
+
+Show staged rows and field-level validation results before committing any changes.
+
+### Step 5: Validate
+
+Detect:
+
+- Missing required fields.
+- Invalid field formats.
+- Unknown institution references.
+- Invalid academic-year values.
+- Duplicate rows within the file.
+- Potential duplicates against authorised records.
+- Conflicting enrolment information.
+- Unsupported admission categories.
+- Invalid source references.
+
+### Step 6: Correct errors
+
+Allow permitted corrections and a downloadable error report.
+
+Do not silently skip invalid rows.
+
+### Step 7: Confirm and import
+
+Show the actual number of valid, invalid, and review-required records.
+
+Require explicit confirmation before saving.
+
+### Step 8: Results
+
+Display real outcomes:
+
+- Inserted.
+- Updated.
+- Skipped.
+- Rejected.
+- Awaiting review.
+
+Save the import batch, importing user, source information, timestamps, and result summary.
+
+Use safe batch processing and prevent accidental duplicate execution.
+
+---
+
+# 12. Import History
+
+Create a real import history page.
+
+Display only actual import jobs.
+
+Suggested columns:
+
+- Import batch ID.
+- Institution.
+- Uploaded filename.
+- Academic year.
+- Uploaded by.
+- Upload timestamp.
+- Processing status.
+- Records processed.
+- Errors.
+- Outcome.
+- Available actions.
+
+Support:
+
+- Search.
+- Filtering.
+- Pagination.
+- Viewing import details.
+- Downloading the associated error report.
+- Viewing validation summaries.
+- Retrying failed jobs when safe and permitted.
+
+Do not create fake import history entries.
+
+A failed import must not be displayed as successful.
+
+---
+
+# 13. Validation Findings
+
+Build a dedicated validation findings module.
+
+Each finding should include:
+
+- Finding ID.
+- Institution.
+- Affected record reference.
+- Rule or issue category.
+- Severity.
+- Explanation.
+- Evidence.
+- Detection timestamp.
+- Review status.
+- Resolution details.
+
+Examples of valid deterministic checks:
+
+- Missing required fields.
+- Invalid identifier format.
+- Inconsistent academic-year values.
+- Duplicate import rows.
+- Conflicting enrolment information.
+- Unknown institution references.
+- Missing or unverified intake references.
+
+Clearly separate automated format checks, rule-based validation, potential duplicate candidates, human review decisions, and official external verification.
+
+Do not automatically label a student fraudulent because of a similarity score.
+
+Do not invent validation findings.
+
+---
+
+# 14. Duplicate Review
+
+Create a controlled duplicate review workflow.
+
+Use protected identifier matching where permitted, with a keyed HMAC or equivalent mechanism for deterministic matching.
+
+For each candidate, display only the minimum necessary information.
+
+Allow authorised reviewers to:
+
+- Inspect the candidate match.
+- Review supporting evidence.
+- Mark it as a confirmed duplicate submission.
+- Mark it as a legitimate separate enrolment.
+- Request more information.
+- Dismiss it with a reason.
+- Escalate it for review.
+
+Do not automatically merge or delete student records.
+
+Record decisions and reasons in the audit trail.
+
+---
+
+# 15. Programme Management
+
+Create a programme management section for authorised institution users.
+
+Support:
+
+- Programme name.
+- Programme identifier where available.
+- Department.
+- Applicable academic year.
+- Programme status.
+- Related approved intake reference.
+- Source and approval metadata where available.
+
+Allow authorised creation, editing, and deactivation.
+
+Validate that enrolment records refer to the correct institution and programme.
+
+Do not invent official programme approvals or intake values.
+
+---
+
+# 16. Approved Intake and Intake Monitoring
+
+Build a dedicated approved-intake module.
+
+For each applicable institution, programme, and academic year, store:
+
+- Approved intake value.
+- Official approval reference.
+- Source.
+- Effective period.
+- Dataset version.
+- Verification status.
+- Last updated timestamp.
+
+Compare actual enrolment against the relevant approved value.
+
+Display:
+
+- Approved intake.
+- Actual enrolment.
+- Remaining seats where meaningful.
+- Utilisation percentage.
+- Potential over-enrolment.
+- Missing source data.
+- Unverified intake reference.
+
+Use the same reporting period and relevant categories in both the numerator and denominator.
+
+If official intake data is unavailable, display “Approved intake data unavailable.”
+
+Do not invent intake figures or automatically declare a compliance violation solely from an unexplained discrepancy.
+
+---
+
+# 17. Verification workflow
+
+Create a clear verification status system.
+
+Use distinct statuses such as:
+
+- Not submitted.
+- Pending validation.
+- Validation issues found.
+- Awaiting correction.
+- Awaiting authorised review.
+- Format valid; official verification not completed.
+- Officially verified.
+- Verification failed.
+- Rejected with reason.
+
+The exact statuses should be appropriate to the real workflow and supported by documented rules.
+
+### Official APAAR verification
+
+Investigate whether an authorised APAAR integration is available and whether this application has the necessary partner approval, credentials, and permission.
+
+Do not assume that a publicly visible website implies access to a verification API.
+
+Do not invent API endpoints or simulate government responses.
+
+If no authorised integration is available, show:
+
+**Official APAAR verification is not configured.**
+
+A valid identifier format must never automatically be presented as official identity verification.
+
+---
+
+# 18. Institution Reports
+
+Build a dedicated institution reporting centre.
+
+Allow authorised users to select:
+
+- Institution.
+- Academic year.
+- Programme.
+- Enrolment status.
+- Validation status.
+- Relevant category.
+- Reporting period.
+
+Available reports should include:
+
+1. Institution enrolment summary.
+2. Programme-wise enrolment.
+3. Approved intake versus actual enrolment.
+4. Validation findings.
+5. Potential duplicate review.
+6. Data completeness.
+7. Import outcomes.
+8. Correction history.
+9. Verification status summary.
+10. Academic-year comparison where historical data exists.
+
+Every report must use actual database queries and explicit filters.
+
+Include:
+
+- Report title.
+- Institution identity.
+- Reporting period.
+- Generation timestamp.
+- Applied filters.
+- Metric definitions.
+- Relevant source information.
+- Clear indication of missing or unverified data.
+
+Never invent report figures.
+
+---
+
+# 19. Download and export centre
+
+Implement working downloads, not decorative buttons.
+
+### PDF reports
+
+Generate a clean, professional PDF containing:
+
+- Report title.
+- Institution details where authorised.
+- Reporting period.
+- Summary metrics.
+- Relevant tables.
+- Validation findings where appropriate.
+- Source notes.
+- Generation timestamp.
+- Page numbers where appropriate.
+
+Use a consistent, professional document style.
+
+### CSV export
+
+Allow authorised users to export filtered data using the currently selected filters.
+
+Use safe CSV encoding and appropriate handling of spreadsheet formula injection.
+
+Mask sensitive identifiers by default.
+
+Require additional permission for any export containing sensitive fields.
+
+### Export history
+
+Where useful, record:
+
+- Export ID.
+- User.
+- Report type.
+- Filters.
+- Timestamp.
+- Outcome.
+
+Do not retain generated files indefinitely without a justified retention policy.
+
+Never allow exports to bypass role permissions or database access policies.
+
+---
+
+# 20. Institution Audit Trail
+
+Build an institution audit interface.
+
+Record actual actions such as:
+
+- Student record creation.
+- Student record correction.
+- Record archiving.
+- Import submission.
+- Import completion.
+- Validation decisions.
+- Review decisions.
+- Institution membership changes.
+- Report exports.
+- Relevant administrative actions.
+
+Each event should include the actor, timestamp, action, affected record reference, and minimal appropriate change summary.
+
+Restrict audit access by role.
+
+Never include raw APAAR identifiers, secrets, or unnecessary personal data in audit payloads.
+
+Protect audit records from ordinary application-level modification and document administrator-level trust limits.
+
+Do not fabricate historical events.
+
+---
+
+# 21. Add, edit, delete, and approval workflows
+
+Implement real CRUD functionality for authorised entities.
+
+### Student records
+
+- Create.
+- View.
+- Edit.
+- Correct.
+- Archive or deactivate where permitted.
+- Review history.
+
+### Institutions
+
+- Submit institution claims.
+- Review claims.
+- Approve or reject claims.
+- Correct institution reference information where authorised.
+- Suspend access where permitted.
+
+### Programmes
+
+- Create.
+- View.
+- Edit.
+- Deactivate.
+
+### Staff and memberships
+
+- Invite.
+- Assign permitted roles.
+- Approve access.
+- Revoke access.
+- View membership history.
+
+Use confirmation dialogs for destructive actions.
+
+Prefer soft deletion or archival for records requiring an audit history. Apply actual deletion only where permitted and consistent with applicable retention and privacy requirements.
+
+Every mutation must be saved in the database and reflected in the UI.
+
+---
+
+# 22. Notifications
+
+Implement notifications only for actual events, such as:
+
+- Import completed.
+- Import failed.
+- Correction requested.
+- Review assigned.
+- Institution claim approved.
+- Institution claim rejected.
+- Report generation completed.
+- Relevant submission status changed.
+
+Notifications must be generated from actual application events.
+
+Do not insert fake notifications.
+
+Respect role permissions and avoid including raw sensitive identifiers.
+
+---
+
+# 23. Database architecture
+
+Design a normalised Supabase PostgreSQL schema appropriate to the application.
+
+Consider:
+
+- profiles.
+- roles.
+- role assignments.
+- institutions.
+- institution memberships.
+- institution claims.
+- states and union territories.
+- districts.
+- reference-data source versions.
+- programmes.
+- academic years.
+- approved intake references.
+- student identity records.
+- enrolments.
+- import batches.
+- staged import rows.
+- validation rules.
+- validation findings.
+- duplicate candidates.
+- review cases.
+- review decisions.
+- verification requests and outcomes.
+- report/export history.
+- audit events.
+- notifications.
+
+Use proper foreign keys, constraints, indexes, timestamps, and controlled status values.
+
+Separate sensitive identity information from general enrolment information where appropriate.
+
+Use migrations for database changes.
+
+Do not create redundant tables without purpose.
+
+Do not insert demo student or institution records.
+
+---
+
+# 24. Security and privacy requirements
+
+Implement:
+
+- Supabase Auth.
+- Row Level Security on all sensitive tables.
+- Server-side authorisation.
+- Least-privilege permissions.
+- Secure session handling.
+- Input validation.
+- Safe file upload restrictions.
+- Protected report exports.
+- Secret management.
+- Redacted application logs.
+- Appropriate retention policies.
+- Secure backups and recovery guidance.
+
+Protect APAAR identifiers with authenticated encryption where recoverability is required, and use a keyed matching mechanism for permitted duplicate checks.
+
+Keep encryption keys outside the browser and database records.
+
+Never expose the Supabase service-role key to the frontend.
+
+Do not collect unrelated personal data.
+
+Do not use real student information in development or automated tests.
+
+Do not claim compliance certification without independent evidence.
+
+---
+
+# 25. Real-data-only requirements
+
+This project must not contain fabricated production records.
+
+### Never create
+
+- Fake students.
+- Fake institutions.
+- Fake approvals.
+- Fake APAAR verification outcomes.
+- Fake dashboard totals.
+- Fake audit logs.
+- Fake import jobs.
+- Fake report statistics.
+- Fake notifications.
+
+### Allowed sources
+
+- Verified official reference datasets.
+- Authorised institutional submissions.
+- Records entered by authenticated users with appropriate permissions.
+- Actual results from authorised, configured integrations.
+
+### When data is missing
+
+Show a proper empty state and explain what is required to populate it.
+
+If an official dataset is unavailable, implement a controlled import workflow and wait for the real source data.
+
+If API credentials are unavailable, report the configuration requirement.
+
+If no students have been submitted, display zero records.
+
+**Never manufacture data to make the application appear complete.**
+
+---
+
+# 26. Testing and verification
+
+Write and run meaningful tests for:
+
+- Google authentication.
+- Account onboarding.
+- Role permissions.
+- RLS.
+- Cross-institution data isolation.
+- Institution selection.
+- Student creation and editing.
+- CSV/XLSX imports.
+- Duplicate detection.
+- Intake calculations.
+- Validation workflows.
+- Report generation.
+- PDF downloads.
+- CSV exports.
+- Audit logging.
+- Sensitive identifier masking.
+- Empty-state rendering.
+- Dashboard metric consistency.
+
+Verify that a student cannot access another student's records.
+
+Verify that staff cannot access another institution's data.
+
+Verify that institution administrators cannot grant themselves platform administrator privileges.
+
+Verify that users cannot bypass restrictions by manually changing a URL or API request.
+
+Use isolated synthetic test fixtures only for automated testing. Never seed production with synthetic data.
+
+Run the tests and fix failures. Report only tests that were actually executed.
+
+---
+
+# 27. Implementation strategy
+
+Do not attempt to replace the whole project blindly.
+
+Work in the following order.
+
+### Phase 1: Project audit
+
+Inspect the existing application, routes, components, design system, database configuration, and current functionality.
+
+Identify what can be reused.
+
+Preserve the design.
+
+### Phase 2: Authentication and security
+
+Implement Google OAuth configuration, account onboarding, role assignment, database permissions, and RLS.
+
+### Phase 3: Institution reference data
+
+Implement source-backed state, district, and institution data management.
+
+### Phase 4: Student and enrolment modules
+
+Implement persistent student records, academic enrolments, forms, search, filters, and history.
+
+### Phase 5: Imports and validation
+
+Implement staged imports, field mapping, deterministic validation, duplicate candidates, and review workflows.
+
+### Phase 6: Dashboards and reports
+
+Connect dashboard metrics, programme information, intake monitoring, reporting, and exports to real data.
+
+### Phase 7: Audit and notifications
+
+Implement actual audit events, permission-controlled notifications, and export history.
+
+### Phase 8: Testing and deployment
+
+Test the application end to end, fix errors, document setup, and prepare deployment.
+
+After each phase, report the files changed, database changes, completed features, actual test results, and remaining blockers. Continue to the next phase instead of stopping after writing a plan.
+
+---
+
+# 28. Final acceptance criteria
+
+The application is complete only when:
+
+- The landing page clearly explains the platform.
+- Get Started and Sign In work.
+- Google OAuth works when configured.
+- Users receive only authorised role permissions.
+- Student, staff, institution administrator, and platform administrator workflows are distinct.
+- Institution selection uses verified source-backed data.
+- Student records persist in Supabase.
+- Imports, validation, and review work end to end.
+- Approved-intake comparisons use sourced values.
+- Verification status accurately represents what has been verified.
+- Institution reports can be generated and downloaded.
+- PDF and CSV exports work and respect permissions.
+- Add, edit, archive, and approval workflows work.
+- Audit events record actual operations.
+- Empty databases produce correct empty states.
+- No fake production data has been inserted.
+- Sensitive identifiers are protected.
+- Automated tests have been executed and their results reported.
+- Deployment and setup documentation is complete.
+
+## FINAL COMMAND
+
+Build APAAR SmartVerify AI as a complete, professional, full-stack product.
+
+Start with the public landing page and continue through authentication, role-based access, institution selection, student management, imports, validation, verification review, dashboards, audit trails, and downloadable reports.
+
+Create a distinctive premium UI, not a generic template. Make every important interaction functional. Use original, verifiable data only. Never invent student records, colleges, approval data, statistics, or official verification results.
+
+If official data or credentials are unavailable, report the blocker and provide the correct integration or import workflow.
+
+Do not stop after creating a plan or static UI. Implement the application in phases, test it, and report the actual results honestly.

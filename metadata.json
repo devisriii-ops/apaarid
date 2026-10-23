@@ -1,0 +1,8 @@
+{
+  "name": "APAAR SmartVerify AI",
+  "description": "APAAR ID-Based Student Data Management and Verification Platform for AICTE-Approved Institutions. Standardised submissions, explainable validation, duplicate detection, approved intake monitoring, and audit trails.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
